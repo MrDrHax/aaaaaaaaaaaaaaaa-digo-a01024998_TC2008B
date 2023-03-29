@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  mysqlDB:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: Alex
+      MYSQL_PASSWORD: 123
+      MYSQL_DATABASE: example
+      max_allowed_packet: 1G
+
+
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db:
+
+  
