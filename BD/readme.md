@@ -1,1 +1,0 @@
-Carpeta de bases de datos
