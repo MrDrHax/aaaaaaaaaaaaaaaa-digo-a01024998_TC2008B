@@ -1,0 +1,68 @@
+html {
+    background-color: rgb(36, 36, 36);
+    color: aliceblue;
+}
+div {
+    padding: 10px;
+    background-color: rgb(14, 88, 88);
+    margin: 50;
+}
+.style_border {
+    border: 10px dotted red;
+}
+.style_border2{
+    border-left: 1px dotted red;
+    border-right: 2px dotted green;
+    border-top: 3px dotted blue;
+    border-bottom: 4px dotted yellow;
+}
+.style_border-radius {
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.style_background-image {
+    background-image: url("http://images6.fanpop.com/image/photos/36700000/Cats-image-cats-36712791-1222-917.jpg");
+    height: 300px;
+}
+.style_color {
+    color: red;
+}
+.style_font {
+    font: italic small-caps bold 50px cursive;
+}
+.style_font-family {
+    font-family: monospace;
+}
+.style_font-style {
+    font-style: italic;
+}
+.style_width-height {
+    width: 200px;
+    height: 500px;
+}
+.style_list-style {
+    list-style: square;
+}
+.style_margin {
+    margin: 200;
+}
+.style_padding {
+    padding: 200;
+}
+.style_overflow {
+    overflow: visible;
+    width: 800;
+    height: 1em;
+}
+.style_display {
+    display: inline;
+}
+.style_position {
+    position: sticky;
+    top: 0;
+}
+.style_filter {
+    background-image: url("http://images6.fanpop.com/image/photos/36700000/Cats-image-cats-36712791-1222-917.jpg");
+    filter: blur(10px);
+    height: 500px;
+}
