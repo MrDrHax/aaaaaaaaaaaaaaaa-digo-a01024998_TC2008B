@@ -1,0 +1,93 @@
+:root {
+    --col1: rgb(2, 115, 160);
+    --col2: rgb(52, 235, 241);
+    --col3: rgb(63, 65, 85);
+    --col4: rgb(129, 146, 107);
+    --colText: white;
+}
+
+html, body {
+    background-color: rgb(78, 78, 78);
+    color: var(--colText);
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--col3);
+    padding: 0 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    color: var(--col2);
+    text-align: center;
+}
+
+.sections {
+    height: 100%;
+    padding: 10px;
+    vertical-align: text-bottom;
+    vertical-align: bottom;
+}
+
+.sections a{
+    padding: 5px 10px;
+    background-color: var(--col1);
+    color: var(--colText);
+    text-decoration: none;
+}
+
+.course {
+    background-color: var(--col4);
+
+    padding: 30px 40px;
+
+    text-align: center;
+}
+
+.course h2 {
+    text-align: center;
+}
+
+.course p {
+    text-align: center;
+    max-width: 80em;
+}
+
+.info {
+    text-align: center;
+    background-color: var(--col3);
+    padding: 20px 50px;
+}
+
+.info2 {
+    background-color: var(--col4);
+    color: var(--colText);
+    border: 0;
+    border-radius: 5px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.section {
+    text-align: center;
+    margin: 10px;
+}
+
+.megafoot {
+    text-align: center;
+    background-color: var(--col3);
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
