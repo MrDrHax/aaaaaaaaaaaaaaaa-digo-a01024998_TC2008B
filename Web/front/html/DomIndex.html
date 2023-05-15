@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="../css/eventos_dom.css">
-    <script type="module" src="../js/eventos_dom.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/eventos_dom.css"/>
+    <script src="../js/eventos_dom.js"></script>
     <title>Eventos y Dom</title>
 </head>
 
@@ -20,16 +20,49 @@
     <div class="container">
         <h3>Preguntas</h3>
         <ol>
-            <li>¿Qué es el DOM?</li>
-            <li>¿Qué es un nodo?</li>
-            <li>¿Cómo se accede a un elemento del DOM?</li>
-            <li>¿Cómo se modifica un elemento del DOM?</li>
-            <li>¿Cuál es la diferencia entre getElementby* y querySelector*?</li>
-            <li>¿Qué es un evento?</li>
-            <li>¿Qué es un listener?</li>
-            <li>¿Qué es un callback?</li>
-            <li>¿Qué es un objeto de evento?</li>
-        </ol>        
+            <li>
+              <strong>¿Qué es el DOM?</strong>
+              <br>
+              A: El DOM (Document Object Model) es una representación estructurada en forma de árbol de un documento HTML o XML. Proporciona una interfaz que permite acceder y manipular los elementos de un documento web de manera dinámica. El DOM representa cada elemento HTML como un nodo en el árbol, lo que permite modificar su contenido, atributos y estilos, así como responder a eventos.
+            </li>
+            <li>
+              <strong>¿Qué es un nodo?</strong>
+              <br>
+              A: Un nodo en el contexto del DOM es cada uno de los elementos que conforman el árbol de estructura del documento. Puede representar elementos HTML, atributos, texto, comentarios u otros tipos de contenido. Cada nodo tiene relaciones jerárquicas con otros nodos, como nodos padre, nodos hijos y nodos hermanos.
+            </li>
+            <li>
+              <strong>¿Cómo se accede a un elemento del DOM?</strong>
+              <br>
+              A: Para acceder a un elemento del DOM, se pueden utilizar diferentes métodos y propiedades según el caso. Algunos ejemplos comunes son:
+              <ul>
+                <li>getElementById: Permite acceder a un elemento por su ID único.</li>
+                <li>getElementsByClassName: Permite acceder a elementos por su clase.</li>
+                <li>getElementsByTagName: Permite acceder a elementos por su nombre de etiqueta.</li>
+                <li>querySelector: Permite acceder a un elemento utilizando selectores CSS.</li>
+              </ul>
+              Estos métodos devuelven una referencia al elemento que se puede almacenar en una variable y luego se puede manipular.
+            </li>
+            <li>
+              <strong>¿Cómo se modifica un elemento del DOM?</strong>
+              <br>
+              A: Para modificar un elemento del DOM, se pueden utilizar propiedades y métodos disponibles en el elemento. Algunas formas comunes de modificar un elemento son:
+              <ul>
+                <li>Modificar el contenido del elemento utilizando la propiedad innerHTML o textContent.</li>
+                <li>Cambiar atributos del elemento utilizando la propiedad setAttribute.</li>
+                <li>Modificar estilos del elemento utilizando la propiedad style.</li>
+                <li>Agregar o eliminar clases utilizando las propiedades classList o className.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>¿Cuál es la diferencia entre getElementby* y querySelector*?</strong>
+              <br>
+              A: Las diferencias principales son:
+              <ul>
+                <li>getElementById, getElementsByClassName y getElementsByTagName son métodos más antiguos y devuelven una colección HTML o un solo elemento específico en base a su ID, clase o etiqueta.</li>
+                <li>querySelector y querySelectorAll son métodos más modernos que permiten seleccionar elementos utilizando selectores CSS, lo que brinda una mayor flexibilidad y poder de selección.</li>
+              </ul>
+            </li>
+          </ol>     
     </div>
 
     <h3>Ejercicios de código</h3>
@@ -113,9 +146,21 @@
         <h2>Conclusiones</h2>
 
         <h4>Experiencia general</h4>
+        <p>ChatGPT y github copilot son ambas herramientas muy poderosas. Mientras este aprendiendo, espero no usarlas para que pueda aprender bien, pero la verdad es que ya sepa hacer algo, el no usarlas no solamente me parece innecesario, si no puede significar ser una desventaja laboral. Si un men que solo sabe usar ChatGPT puede hacer código mas rápido que yo, no veo porque no hacerlo yo.
+
+            Es como usar un compilador. El binario existe, pero ya hay nuevas formas de trabajo.
+        </p>
+
         <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>
+        <p>Copilot, como dice su nombre, es mejor como un copiloto. Estas en tu editor y mientras estas programando, te termina la idea.
+
+            Mientras tanto, ChatGPT es mejor para cuando no sabes que hacer. Puedes pedirle que te de ideas, y puedes pedir que arregle código dándole suficiente contexto.
+        </p>
+
         <h4>Ventajas de usar AI para programar</h4>
+        <p>GOTA GO FAST, GOTA GO FAST, FASTER FASTER WUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU (musiquita de sonic)</p>
         <h4>Desventajas de usar AI para programar</h4>
+        <p>Sabes programar sin saber que estas haciendo, no puedo describir que tan peligroso es eso, y la verdad, no conoce algoritmos nuevos ni nada (al menos por ahora). Si llegas a un nivel suficientemente difícil, chatgpt y copilot no te van a ayudar mucho. Solo te van a dar cosas que te pueden mandar en la dirección opuesta.</p>
     </div>
 
 </body>
