@@ -27,7 +27,7 @@ CREATE TABLE DEPORTISTA
     FOREIGN KEY (idPais) REFERENCES PAIS(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE DISIPLINA
+CREATE TABLE DISCIPLINA
 (
     id INT NOT NUll AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE PRUEBA
     lugar VARCHAR(50) NOT NULL,
     numeroDeportistasInscritos INT NOT NULL,
     naturaleza VARCHAR(10) NOT NULL,
-    FOREIGN KEY (idDisiplina) REFERENCES DISIPLINA(id)
+    FOREIGN KEY (idDisiplina) REFERENCES DISCIPLINA(id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE CLASIFICACION
@@ -62,7 +62,7 @@ CREATE TABLE RESULTADO
     idDeportistaOro VARCHAR(5) NOT NULL,
     idDeportistaPlata VARCHAR(5) NOT NULL,
     idDeportistaBronce VARCHAR(5) NOT NULL,
-    FOREIGN KEY (idDisiplina) REFERENCES DISIPLINA(id),
+    FOREIGN KEY (idDisiplina) REFERENCES DISCIPLINA(id),
     FOREIGN KEY (idDeportistaOro) REFERENCES DEPORTISTA(matricula),
     FOREIGN KEY (idDeportistaPlata) REFERENCES DEPORTISTA(matricula),
     FOREIGN KEY (idDeportistaBronce) REFERENCES DEPORTISTA(matricula)
@@ -201,4 +201,24 @@ INSERT INTO PRUEBA (idDisiplina, fecha, lugar, numeroDeportistasInscritos, natur
 INSERT INTO PRUEBA (idDisiplina, fecha, lugar, numeroDeportistasInscritos, naturaleza) VALUES (15, '2023-6-7', 'GYM 1', -1, 'elimina001');
 INSERT INTO PRUEBA (idDisiplina, fecha, lugar, numeroDeportistasInscritos, naturaleza) VALUES (15, '2023-6-7', 'GYM 2', -1, 'elimina002');
 INSERT INTO PRUEBA (idDisiplina, fecha, lugar, numeroDeportistasInscritos, naturaleza) VALUES (15, '2023-6-8', 'GYM 1', -1, 'final');
+
+-- ya me canse, las ultimas 2:
+
+-- CLASIFICACION table
+INSERT INTO CLASIFICACION (idPrueba, idDeportista, rango)
+SELECT PRUEBA.id, matricula, ROUND(RAND() * 10) + 1
+FROM `PRUEBA` CROSS JOIN `DEPORTISTA`
+WHERE PRUEBA.naturaleza like 'final'
+ORDER BY RAND() LIMIT 400;
+
+-- RESULTADO table
+INSERT INTO RESULTADO (idDisiplina, idDeportistaOro, idDeportistaPlata, idDeportistaBronce)
+SELECT idDisiplina,
+    (SELECT matricula FROM DEPORTISTA ORDER BY RAND() LIMIT 1),
+    (SELECT matricula FROM DEPORTISTA ORDER BY RAND() LIMIT 1),
+    (SELECT matricula FROM DEPORTISTA ORDER BY RAND() LIMIT 1)
+FROM PRUEBA, DISCIPLINA, DEPORTISTA
+WHERE PRUEBA.idDisiplina = DISCIPLINA.id
+    AND PRUEBA.naturaleza = 'final'
+ORDER BY PRUEBA.id;
 
